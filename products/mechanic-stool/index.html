@@ -11,7 +11,7 @@ body{font-family:Arial,Helvetica,Calibri,sans-serif;font-size:14px;line-height:1
 .sidebar{width:215px;min-width:215px;background:#f8f8f6;border-right:1px solid #ddd;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;z-index:100;padding-bottom:20px;}
 .sidebar-logo{padding:18px 16px 12px;border-bottom:1px solid #ddd;font-size:12px;font-weight:700;color:#c0392b;}
 .sidebar-logo span{display:block;font-size:11px;color:#888;font-weight:400;margin-top:2px;}
-.sidebar-verdict{margin:10px 12px;background:#e8f5ef;border:1px solid #a8d5bc;border-radius:5px;padding:9px 11px;font-size:12px;color:#1a6b3c;font-weight:700;text-align:center;}
+.sidebar-verdict{margin:10px 12px;background:#fef6e8;border:1px solid #f5d795;border-radius:5px;padding:9px 11px;font-size:12px;color:#946800;font-weight:700;text-align:center;}
 .sidebar nav{padding:8px 0;flex:1;}
 .nav-section{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;padding:12px 16px 4px;}
 .sidebar nav a{display:block;padding:6px 16px;font-size:12px;color:#444;text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;}
@@ -26,8 +26,8 @@ body{font-family:Arial,Helvetica,Calibri,sans-serif;font-size:14px;line-height:1
 .meta-item{display:flex;flex-direction:column;gap:3px;}
 .meta-item .ml{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#777;}
 .meta-item .mv{font-size:12px;font-weight:700;color:#eee;}
-.verdict-banner{background:#1a6b3c;color:white;padding:13px 52px;display:flex;align-items:center;gap:12px;}
-.verdict-badge{background:white;color:#1a6b3c;font-weight:700;font-size:11px;padding:5px 11px;border-radius:3px;white-space:nowrap;}
+.verdict-banner{background:#b8770b;color:white;padding:13px 52px;display:flex;align-items:center;gap:12px;}
+.verdict-badge{background:white;color:#b8770b;font-weight:700;font-size:11px;padding:5px 11px;border-radius:3px;white-space:nowrap;}
 .verdict-text{font-size:13px;color:rgba(255,255,255,0.9);}
 .content{padding:0 52px;}
 section{padding:40px 0;border-bottom:1px solid #e5e2db;}
@@ -68,6 +68,9 @@ tr:last-child td{border-bottom:none;}
 .go-box{background:#e8f5ef;border-left:4px solid #1a6b3c;padding:14px 18px;margin:18px 0;border-radius:0 5px 5px 0;}
 .go-box .go-title{font-size:14px;font-weight:700;color:#1a6b3c;margin-bottom:5px;}
 .go-box p{color:#1a4a2e;font-size:13px;margin-bottom:0;}
+.amber-box{background:#fef6e8;border-left:4px solid #b8770b;padding:14px 18px;margin:18px 0;border-radius:0 5px 5px 0;}
+.amber-box .go-title{font-size:14px;font-weight:700;color:#946800;margin-bottom:5px;}
+.amber-box p{color:#5a3f00;font-size:13px;margin-bottom:0;}
 .trends-link-box{background:#f0f4fb;border:1px solid #c5d8f5;border-radius:7px;padding:16px 20px;margin:16px 0;display:flex;align-items:center;gap:14px;}
 .trends-link-box .tl-icon{font-size:28px;}
 .trends-link-box .tl-text{flex:1;}
@@ -117,7 +120,7 @@ footer strong{color:white;}
 <!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="sidebar-logo">INNOVA Mechanic Stool<span>Market Research &middot; April 2026</span></div>
-  <div class="sidebar-verdict">&check; Overall Verdict: GO</div>
+  <div class="sidebar-verdict">&check; Verdict: CONDITIONAL GO</div>
   <nav>
     <div class="nav-section">Overview</div>
     <a href="#product">Product Definition</a>
@@ -154,8 +157,8 @@ footer strong{color:white;}
 
   <!-- VERDICT BANNER -->
   <div class="verdict-banner">
-    <div class="verdict-badge">&check; OVERALL VERDICT: GO</div>
-    <div class="verdict-text">Strong market opportunity in a ~$99M US mechanic stool market. $1.2M/month Amazon category with 80% of revenue going to height-adjustable stools and zero competitors matching INNOVA's low-profile (12"&ndash;18") + integrated compartment design for men 40+ with hip/knee/foot pain.</div>
+    <div class="verdict-badge">&#9888; OVERALL VERDICT: CONDITIONAL GO</div>
+    <div class="verdict-text"><strong>The condition is strategic fit, not market fit.</strong> The market is real ($1.2M/month Amazon category) and the white space is genuine (zero competitors match the full feature combo). The question is whether Innova should be the company filling it, or whether this is a distraction from the diagnostic-first identity that justifies premium pricing on the other products. GO only if Innova has spare capacity and is comfortable with the brand-extension question.</div>
   </div>
 
   <div class="content">
@@ -476,9 +479,14 @@ footer strong{color:white;}
         <div class="step-box"><div class="step-num">04</div><div class="step-title">Demand Validation</div><div class="step-result">&check; $1.2M/mo Amazon</div></div>
         <div class="step-box"><div class="step-num">05</div><div class="step-title">Market Sizing</div><div class="step-result">&check; ~$99M TAM, $3.87M Yr3</div></div>
       </div>
-      <div class="go-box" style="margin-top:24px;">
-        <div class="go-title" style="font-size:18px;">&check; OVERALL VERDICT: GO</div>
-        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#1a4a2e;">The INNOVA Mechanic Stool targets a validated, growing niche market (~$99M US mechanic stool/creeper, ~5.5% CAGR) within the broader $84B DIY auto maintenance ecosystem, with a differentiated product that solves documented consumer pain points. The Amazon mechanic stool category generates $14.5M annually with the premium $90+ tier capturing nearly half of all revenue. INNOVA's unique combination of low-profile design (12"&ndash;18"), 3" cushion, swing-open compartment storage, and locking rubber wheels has zero direct competitors. The ergonomic positioning for men 40+ with joint pain opens an untapped marketing angle in a category where no brand currently speaks to this massive demographic. With a realistic path to $3.87M in Year 3 revenue, this is a strong GO.</p>
+      <div class="amber-box" style="margin-top:24px;">
+        <div class="go-title" style="font-size:18px;">&#9888; OVERALL VERDICT: CONDITIONAL GO &mdash; Strategic Fit Is the Question</div>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Portfolio-level assessment (cross-product rubric applied across all four Innova candidates):</strong> The market case is strong. The strategic-fit question is what makes this conditional.</p>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Demand reality: PASS</strong> &mdash; $1.2M/month Amazon category, 18,134 units sold monthly, 5 years of consistent search trend. The premium $90+ tier (where Innova would compete) is 48.5% of revenue with only 24% of units, proving consumers willingly pay up for quality. This is real, validated demand.</p>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Defensible position: STRONGEST PASS of the four.</strong> Zero competitors match the full feature combo (12&rdquo; low-profile + 3&rdquo; cushion + swing-open compartment + locking wheels). The white space is genuinely empty. The &ldquo;for men 40+ with joint pain&rdquo; positioning is a wide-open marketing angle no competitor uses.</p>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Revenue worth the effort: WEAK PASS</strong> &mdash; $3.87M Yr3 in a $99M TAM. It&rsquo;s a niche-leader play, not a category-defining one. For a smaller company this would be an obvious yes &mdash; for Innova it depends on whether you can run it lean.</p>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Strategic fit: CONDITIONAL &mdash; this is the hard question.</strong> Innova is an automotive diagnostics company. A mechanic stool is automotive adjacent &mdash; it sits in the garage, sure, but it&rsquo;s a piece of furniture, not a diagnostic tool. It uses zero of Innova&rsquo;s core technical capability. The retail-relationship leverage is real (AutoZone, Home Depot), but that&rsquo;s a distribution argument, not a strategic-fit one. Ask yourself: if this product were called &ldquo;ErgoGarage Stool&rdquo; instead of &ldquo;Innova Stool,&rdquo; would the brand feel diluted or extended?</p>
+        <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Risk-adjusted ROI: PASS, but modest.</strong> Low execution risk (physical product, no software, no certification), so the discount is small. $3.87M &times; 0.7 = $2.7M of risk-adjusted Yr-3 revenue. Acceptable but not exciting. If you go forward, file the patents on day one &mdash; the Chinese-copycat risk is the highest of the four products.</p>
       </div>
       <h3>Key Risks and Mitigations</h3>
       <table>
