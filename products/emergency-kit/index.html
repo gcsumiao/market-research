@@ -13,7 +13,7 @@ body{font-family:Arial,Helvetica,Calibri,sans-serif;font-size:14px;line-height:1
 .sidebar{width:215px;min-width:215px;background:#f8f8f6;border-right:1px solid #ddd;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;z-index:100;padding-bottom:20px;}
 .sidebar-logo{padding:18px 16px 12px;border-bottom:1px solid #ddd;font-size:12px;font-weight:700;color:#c0392b;font-family:Arial,sans-serif;}
 .sidebar-logo span{display:block;font-size:11px;color:#888;font-weight:400;margin-top:2px;}
-.sidebar-verdict{margin:10px 12px;background:#e8f5ef;border:1px solid #a8d5bc;border-radius:5px;padding:9px 11px;font-size:12px;color:#1a6b3c;font-weight:700;text-align:center;}
+.sidebar-verdict{margin:10px 12px;background:#fef6e8;border:1px solid #f5d795;border-radius:5px;padding:9px 11px;font-size:12px;color:#946800;font-weight:700;text-align:center;}
 .sidebar nav{padding:8px 0;flex:1;}
 .nav-section{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;padding:12px 16px 4px;}
 .sidebar nav a{display:block;padding:6px 16px;font-size:12px;color:#444;text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;}
@@ -34,8 +34,8 @@ body{font-family:Arial,Helvetica,Calibri,sans-serif;font-size:14px;line-height:1
 .meta-item .mv{font-size:12px;font-weight:700;color:#eee;}
 
 /* ── VERDICT ── */
-.verdict-banner{background:#1a6b3c;color:white;padding:13px 52px;display:flex;align-items:center;gap:12px;}
-.verdict-badge{background:white;color:#1a6b3c;font-weight:700;font-size:11px;padding:5px 11px;border-radius:3px;white-space:nowrap;}
+.verdict-banner{background:#b8770b;color:white;padding:13px 52px;display:flex;align-items:center;gap:12px;}
+.verdict-badge{background:white;color:#b8770b;font-weight:700;font-size:11px;padding:5px 11px;border-radius:3px;white-space:nowrap;}
 .verdict-text{font-size:13px;color:rgba(255,255,255,0.9);}
 
 /* ── CONTENT ── */
@@ -90,6 +90,9 @@ tr:last-child td{border-bottom:none;}
 .go-box{background:#e8f5ef;border-left:4px solid #1a6b3c;padding:14px 18px;margin:18px 0;border-radius:0 5px 5px 0;}
 .go-box .go-title{font-size:14px;font-weight:700;color:#1a6b3c;margin-bottom:5px;}
 .go-box p{color:#1a4a2e;font-size:13px;margin-bottom:0;}
+.amber-box{background:#fef6e8;border-left:4px solid #b8770b;padding:14px 18px;margin:18px 0;border-radius:0 5px 5px 0;}
+.amber-box .go-title{font-size:14px;font-weight:700;color:#946800;margin-bottom:5px;}
+.amber-box p{color:#5a3f00;font-size:13px;margin-bottom:0;}
 
 /* ── TRENDS LINK BOX ── */
 .trends-link-box{background:#f0f4fb;border:1px solid #c5d8f5;border-radius:7px;padding:16px 20px;margin:16px 0;display:flex;align-items:center;gap:14px;}
@@ -164,6 +167,8 @@ footer strong{color:white;}
 .product-hero img{width:100%;min-width:unset;}
 .trends-stats{grid-template-columns:repeat(2,1fr);}
 }
+.home-btn{display:block;margin:12px 12px 0;padding:8px 12px;background:#c0392b;color:#fff;text-decoration:none;border-radius:5px;font-size:12px;font-weight:700;text-align:center;transition:background .15s;}
+.home-btn:hover{background:#a93226;}
 </style>
 </head>
 <body>
@@ -171,7 +176,7 @@ footer strong{color:white;}
 <!-- ─────────── SIDEBAR ─────────── -->
 <aside class="sidebar">
   <div class="sidebar-logo">Emergency Kit Report<span>Market Research · March 2026</span></div>
-  <div class="sidebar-verdict">✓ Overall Verdict: GO</div>
+  <div class="sidebar-verdict">&#9888; Verdict: CONDITIONAL GO / Lean NO-GO</div>
   <nav>
     <div class="nav-section">Overview</div>
     <a href="#product">Product Definition</a>
@@ -188,6 +193,7 @@ footer strong{color:white;}
     <div class="nav-section">Reference</div>
     <a href="#sources">Data Sources (19)</a>
   </nav>
+  <a class="home-btn" href="homepage-index.html">&#8592; Return to Homepage</a>
 </aside>
 
 <!-- ─────────── MAIN ─────────── -->
@@ -210,8 +216,8 @@ footer strong{color:white;}
 
 <!-- VERDICT BANNER -->
 <div class="verdict-banner">
-  <div class="verdict-badge">✓ OVERALL VERDICT: GO</div>
-  <div class="verdict-text">Zero direct competitors. $14.9B addressable market. Nationwide rising demand confirmed. Clear white space at the intersection of smart home technology and emergency preparedness.</div>
+  <div class="verdict-badge">&#9888; VERDICT: CONDITIONAL GO / Lean NO-GO</div>
+  <div class="verdict-text">Biggest upside of the four products, but also biggest unknowns, weakest strategic fit, and highest execution risk. Pause and re-scope before committing capital &mdash; either find a hardware/cellular partner or launch a stripped-down beachhead version first.</div>
 </div>
 
 <div class="content">
@@ -634,9 +640,15 @@ footer strong{color:white;}
     <div class="step-box"><div class="step-num">05</div><div class="step-title">Market Sizing</div><div class="step-result">✓ $14.9B TAM</div></div>
   </div>
 
-  <div class="go-box" style="margin-top:24px;">
-    <div class="go-title" style="font-size:18px;">✓ OVERALL VERDICT: GO</div>
-    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#1a4a2e;">All five research steps confirm a clear, unoccupied market opportunity. <strong>Zero direct competitors</strong> exist in any major US retail channel. Consumer demand is real, vocal, and measurably rising. The $14.9B combined TAM grows at 13%+ annually. Price range of $149–$249 is well-calibrated to the market. Product weight target of <strong>under 10 lbs</strong> (well within the 25 lb maximum) makes it genuinely portable for car use. Top recommended brand name: <strong>GUARDIO</strong>. Launch strategy: Company Website + Amazon in Year 1 → Home Depot + Lowe's + Walmart in Year 1–2 → Costco + Insurance partnerships in Year 2–3.</p>
+  <div class="amber-box" style="margin-top:24px;">
+    <div class="go-title" style="font-size:18px;">&#9888; OVERALL VERDICT: CONDITIONAL GO / Lean NO-GO &mdash; Pause and Re-Scope</div>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Portfolio-level assessment (cross-product rubric applied across all four Innova candidates):</strong> GUARDIO has the biggest headline upside but also the lowest confidence, weakest strategic fit, and highest execution risk of the four products.</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Demand reality: CONDITIONAL PASS</strong> &mdash; and this is the weakest part of the case. Search trends are strong and rising, the underlying anxiety is real (44% more concerned, 27 billion-dollar disasters in 2024), and zero competitors exist. But &ldquo;zero competitors&rdquo; can mean two very different things: (a) genuine white space the market hasn&rsquo;t figured out yet, or (b) a category nobody has built because the unit economics don&rsquo;t actually work. The report doesn&rsquo;t fully distinguish between the two. JUDY sells 30K+ kits/year as a physical product without a digital component, but JUDY has spent years and significant marketing dollars educating the category. There&rsquo;s no proof yet that consumers will pay $149&ndash;$249 for a digital emergency screen &mdash; only that they&rsquo;re worried about emergencies and search for kits.</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Defensible position: CONDITIONAL.</strong> First-mover in a new category is a real advantage until Amazon Echo Hub or Google Nest Hub adds an &ldquo;emergency mode&rdquo; feature in a software update. The original research rates this risk as &ldquo;Low&ndash;Medium&rdquo; &mdash; a cross-portfolio view rates it Medium&ndash;High. Both companies have the hardware in 100M+ homes already. Innova&rsquo;s moat would have to be the physical big red button, the dedicated VoIP 911 certification, and the bundled supply kit &mdash; not the software, which can be copied in a quarter.</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Revenue worth the effort: PASS on paper, UNCERTAIN in reality.</strong> $30M Yr3 is the biggest number in the deck, but it&rsquo;s also the lowest-confidence number because there&rsquo;s no comparable. Discount it 50% for new-category risk and you&rsquo;re at $15M &mdash; still meaningful, but no longer dramatically larger than the Jump Starter&rsquo;s $17M (which is a much higher-confidence number).</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Strategic fit: WEAK.</strong> This is the biggest stretch from Innova&rsquo;s core. It&rsquo;s not automotive (the roadside mode is, but that&rsquo;s a small fraction of the value). It&rsquo;s not a diagnostic tool. It&rsquo;s a smart-home consumer electronics product competing in a category dominated by Amazon, Google, and Apple. Innova has no brand permission in smart home. None of the existing retail relationships (AutoZone, Advance Auto) are the right channels &mdash; you&rsquo;d need Best Buy, Target, and Home Depot&rsquo;s smart home aisle, where Innova has no shelf presence.</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Risk-adjusted ROI: THIS IS THE HARD ONE.</strong> The execution risk is genuinely the highest of the four products: hardware + embedded software + cellular connectivity + VoIP 911 carrier certification + a physical supply-kit supply chain + new-category consumer education. Each is solvable individually. All five together, in a company that&rsquo;s never shipped any of them, is a different kind of project than a refreshed jump starter. If you discount the $30M revenue by 60% (honest for a moonshot), you&rsquo;re at $12M Yr3 &mdash; and you&rsquo;ve spent 18&ndash;24 months and significantly more capital than the other three products combined to get there.</p>
+    <p style="font-size:14px;margin-top:6px;line-height:1.75;color:#5a3f00;"><strong>Path to GO:</strong> This is a NO-GO as currently scoped unless one of two things is true: (a) Innova partners with a company that already has VoIP/cellular hardware experience to de-risk the build, or (b) you launch a stripped-down &ldquo;GUARDIO Lite&rdquo; (screen-only, no physical kit, no cellular &mdash; just WiFi + app + 911 hand-off) at $99 to validate the category before committing to the full product. As designed, this is a moonshot that competes for capital with three more proven bets. The market might be there. The product, as scoped, is too ambitious for a first entry into a new category.</p>
   </div>
 
   <h3>Key risks and mitigations</h3>
