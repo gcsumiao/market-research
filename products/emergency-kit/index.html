@@ -170,6 +170,7 @@ footer strong{color:white;}
 .home-btn{display:block;margin:12px 12px 0;padding:8px 12px;background:#c0392b;color:#fff;text-decoration:none;border-radius:5px;font-size:12px;font-weight:700;text-align:center;transition:background .15s;}
 .home-btn:hover{background:#a93226;}
 </style>
+<link rel="stylesheet" href="../../shared/report-charts.css">
 </head>
 <body>
 
@@ -555,7 +556,7 @@ footer strong{color:white;}
   <div class="names-grid">
     <div class="name-card top">
       <span class="top-badge">★ Top Recommendation</span>
-      <div class="nm">Emergency Kit</div>
+      <div class="nm">Guardio</div>
       <div class="tl">"Know exactly what to do."</div>
       <div class="cn">Guardian + IO (input/output). Short, memorable, tech-forward but warm. No survivalist connotations. Easy to say and spell globally. Domain and trademark availability should be verified.</div>
     </div>
@@ -738,34 +739,63 @@ footer strong{color:white;}
 
 </div><!-- /main -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="../../shared/report-charts.js"></script>
 <script>
-new Chart(document.getElementById('growthChart'),{
-  type:'line',
-  data:{labels:['2024','2025','2026','2027','2028','2029','2030'],
-    datasets:[
-      {label:'Smart home security',data:[10.1,11.4,12.9,14.6,16.5,18.7,21.9],borderColor:'#2980b9',backgroundColor:'rgba(41,128,185,0.07)',tension:0.4,fill:true,pointRadius:3,borderWidth:2},
-      {label:'Emergency kits',data:[4.8,5.1,5.4,5.7,6.0,6.4,6.8],borderColor:'#c0392b',backgroundColor:'rgba(192,57,43,0.07)',tension:0.4,fill:true,pointRadius:3,borderWidth:2}
-    ]},
-  options:{responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' $'+ctx.parsed.y.toFixed(1)+'B'}}},
-    scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}}},y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>'$'+v+'B'}}}}
-});
+ReportCharts.applyVerdictPills(document.querySelector('#verdict5 table'));
 
-new Chart(document.getElementById('revenueChart'),{
-  type:'bar',
-  data:{labels:['Year 1','Year 2','Year 3'],
-    datasets:[
-      {label:'Screen only',data:[4.5,9.0,14.9],backgroundColor:'#2980b9',borderRadius:4,borderWidth:0},
-      {label:'Combo kit',data:[2.5,7.5,15.0],backgroundColor:'#c0392b',borderRadius:4,borderWidth:0},
-      {label:'Total',type:'line',data:[7.0,16.5,29.9],borderColor:'#1a6b3c',backgroundColor:'transparent',tension:0.4,pointRadius:4,borderWidth:2}
-    ]},
-  options:{responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' $'+ctx.parsed.y.toFixed(1)+'M'}}},
-    scales:{x:{stacked:true,grid:{display:false},ticks:{color:'#888',font:{size:12}}},y:{stacked:true,grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>'$'+v+'M'}}}}
-});
+ReportCharts.renderAll([
+  {
+    selector: 'img[alt="Market size chart"]',
+    type: 'line',
+    title: 'Market Growth Projection 2024–2030',
+    labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+    yFormat: { prefix: '$', suffix: 'B', decimals: 1 },
+    max: 24,
+    series: [
+      {
+        name: 'Smart home security (13.1% CAGR)',
+        color: '#2f86c9',
+        values: [10.1, 11.4, 12.9, 14.6, 16.5, 18.7, 21.9],
+        format: { prefix: '$', suffix: 'B', decimals: 1 }
+      },
+      {
+        name: 'Emergency kits (5.7% CAGR)',
+        color: '#cf4a36',
+        values: [4.8, 5.1, 5.4, 5.7, 6.0, 6.4, 6.8],
+        format: { prefix: '$', suffix: 'B', decimals: 1 }
+      }
+    ]
+  },
+  {
+    selector: 'img[alt="Revenue model chart"]',
+    type: 'stackedBarLine',
+    title: 'Revenue Model: Year 1–3',
+    labels: ['Year 1', 'Year 2', 'Year 3'],
+    yFormat: { prefix: '$', suffix: 'M', decimals: 1 },
+    max: 32,
+    stacks: [
+      {
+        name: 'Screen only ($149)',
+        color: '#4d96c5',
+        values: [4.5, 9.0, 14.9],
+        format: { prefix: '$', suffix: 'M', decimals: 1 }
+      },
+      {
+        name: 'Combo kit ($249)',
+        color: '#d06453',
+        values: [2.5, 7.5, 15.0],
+        format: { prefix: '$', suffix: 'M', decimals: 1 }
+      }
+    ],
+    line: {
+      name: 'Total Revenue',
+      color: '#1f7a49',
+      values: [7.0, 16.5, 29.9],
+      format: { prefix: '$', suffix: 'M', decimals: 1 }
+    }
+  }
+]);
 
-// Sidebar scroll highlight
 const sects = document.querySelectorAll('section[id],div[id]');
 const links = document.querySelectorAll('.sidebar nav a');
 window.addEventListener('scroll',()=>{
