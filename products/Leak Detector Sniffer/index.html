@@ -95,8 +95,10 @@ body {
 .home-btn:hover { background: #a93226; }
 .main {
   margin-left: 215px;
-  flex: 1;
+  flex: 1 1 auto;
+  width: calc(100vw - 215px);
   min-width: 0;
+  min-height: 100vh;
 }
 .header {
   background: #1a1a1a;
@@ -336,13 +338,14 @@ sup.cite {
 }
 sup.cite a { color: inherit; text-decoration: none; }
 .highlight {
-  background: #e8f5ef;
-  border-left: 4px solid #1a6b3c;
+  background: #fdf5f4;
+  border-left: 4px solid #c0392b;
   padding: 14px 18px;
   margin: 18px 0;
   border-radius: 0 5px 5px 0;
 }
 .highlight.warn { background: #fff3e0; border-left-color: #a55d00; }
+.highlight.good { background: #e8f5ef; border-left-color: #1a6b3c; }
 .highlight.danger { background: #fdecea; border-left-color: #c0392b; }
 .trends-link-box {
   background: #f0f4fb;
@@ -452,7 +455,7 @@ footer strong { color: #fff; }
 .assumptions li { margin-bottom: 4px; }
 @media (max-width: 900px) {
   .sidebar { display: none; }
-  .main { margin-left: 0; }
+  .main { margin-left: 0; width: 100%; }
   .header,
   .content,
   .sources-section,
@@ -489,6 +492,7 @@ footer strong { color: #fff; }
   <a class="home-btn" href="../../index.html">&#8592; Return to Homepage</a>
 </aside>
 
+<div class="main">
 <div class="header">
   <div class="header-eyebrow">Confidential Market Research Report</div>
   <h1>Innova <span>LD100 Leak Detector Sniffer</span></h1>
@@ -507,7 +511,6 @@ footer strong { color: #fff; }
   <div class="verdict-text">Strong category fit and regulatory tailwinds support launch, but the case depends on disciplined multi-system positioning rather than competing as a generic HVAC-only sniffer.</div>
 </div>
 
-<div class="main">
 <div class="content">
 <section id="product-def">
   <div class="section-label">Product Overview</div>
@@ -519,9 +522,10 @@ footer strong { color: #fff; }
     </div>
     <div class="product-hero-text">
       <p>The INNOVA LD100 is a handheld, multi-system automotive leak detector with three dedicated detection modes — HVAC refrigerant, EVAP fuel vapor, and Smoke — plus built-in speaker alerts, UV/IR confirmation lighting, and a color-coded leak status display.</p>
+      <p>Many competing sniffers in this reviewed set are also handheld. The LD100 stands out because it combines HVAC, EVAP, and Smoke detection in one handheld device rather than treating those jobs as separate tools.</p>
 
       <div class="differentiator">
-        <strong>Key differentiator:</strong> The LD100 is the only handheld sniffer in its competitive set that combines HVAC, EVAP, and Smoke modes in a single device. This three-mode architecture addresses a real technician workflow gap and is the central positioning hypothesis for this analysis.
+        <strong>Key differentiator:</strong> Many competing products in this set are handheld. The LD100 is unique because it is the only handheld model in this reviewed set that combines HVAC, EVAP, and Smoke modes in one device. This three-mode architecture addresses a real technician workflow gap and is the central positioning hypothesis for this analysis.
       </div>
     </div>
   </div>
@@ -648,7 +652,7 @@ footer strong { color: #fff; }
     </tbody>
   </table>
 
-  <p style="font-size:0.82rem;color:#888;margin-top:-8px">Note: Competitor prices and specs from Amazon US and Harbor Freight listings, April 2026. Multi-system detection (HVAC+EVAP+Smoke) is exclusive to the LD100 among all 33 ASINs analyzed.</p>
+  <p style="font-size:0.82rem;color:#888;margin-top:-8px">Note: Competitor prices and specs from Amazon US and Harbor Freight listings, April 2026. Many competing models in this review are handheld, but none of the 33 ASINs analyzed combine HVAC + EVAP + Smoke in one handheld unit.</p>
 
   <h3>Category Revenue by Brand (Monthly)</h3>
   <table>
@@ -674,7 +678,7 @@ footer strong { color: #fff; }
     </tbody>
   </table>
 
-  <div class="highlight">
+  <div class="highlight good">
     <strong>Key finding:</strong> The $100–$200 tier generates $94K/month from only 6 ASINs — the highest-revenue band. Elitech's ILD-200 ($191, 283 units/month, 628 reviews, 4.4★) proves robust demand at this price point. The LD100's target pricing lands squarely in this sweet spot.
   </div>
 </section>
@@ -721,7 +725,7 @@ footer strong { color: #fff; }
     <div class="kpi"><div class="kpi-value">610</div><div class="kpi-label">Units/month in $100–200 tier</div></div>
   </div>
 
-  <div class="highlight">
+  <div class="highlight good">
     <strong>Signal strength: MODERATE-STRONG.</strong> 1,920 units/month and $266K/month prove active purchasing. The +150% 90-day trend reflects spring/summer ramp. This is a specialized niche — strong enough to justify entry, not large enough for blockbuster revenue.
   </div>
 
@@ -820,8 +824,8 @@ footer strong { color: #fff; }
     <tbody>
       <tr>
         <td><strong>Multi-System Detection</strong></td>
-        <td>Only product with 3 dedicated modes in a single handheld</td>
-        <td>All 33 ASINs are HVAC-only; one Tellegloww 2-in-1 at $70 with 29 u/mo</td>
+        <td>Only handheld model in this reviewed set with dedicated HVAC + EVAP + Smoke modes in one device</td>
+        <td>Many competing products are also handheld, but all 33 reviewed ASINs stop short of the full HVAC + EVAP + Smoke combination; one Tellegloww 2-in-1 reaches only part of the concept</td>
         <td>Amazon CSV: zero competitors match full 3-mode spec</td>
       </tr>
       <tr>
@@ -914,7 +918,7 @@ footer strong { color: #fff; }
     </ul>
   </div>
 
-  <div class="highlight">
+  <div class="highlight good">
     <strong>Quadrant read:</strong> Not a blockbuster revenue driver, but a low-risk extension into a natural adjacency. Strengthens the diagnostic ecosystem and blocks competitors from owning the "diagnose-to-detect" workflow. If Year-1 exceeds 4,000 units, consider accelerating into a 3-SKU family with an IR-sensor premium tier.
   </div>
 </section>
@@ -931,7 +935,7 @@ footer strong { color: #fff; }
 
   <div class="card">
     <div class="card-title">Is Multi-System Detection a Meaningful Advantage?</div>
-    <p><strong>Yes, with a caveat.</strong> Three-mode detection (HVAC + EVAP + Smoke) is the strongest differentiator in the competitive set — zero of 33 ASINs replicate it. It addresses a genuine workflow gap and justifies a premium. The caveat: HVAC/refrigerant detection is the primary purchase driver; EVAP and Smoke are "bonus" features. Marketing should lead with HVAC (the known need) and position EVAP/Smoke as modes that eliminate the need for extra tools.</p>
+    <p><strong>Yes, with a caveat.</strong> Many competitors in this set are also handheld, but none of the 33 reviewed ASINs replicate the LD100's full HVAC + EVAP + Smoke combination in one handheld unit. That addresses a real workflow gap and supports premium positioning. The caveat: HVAC/refrigerant detection is still the primary purchase driver; EVAP and Smoke are incremental value. Marketing should lead with HVAC and position EVAP/Smoke as modes that eliminate the need for extra tools.</p>
   </div>
 
   <div class="card">
@@ -944,7 +948,7 @@ footer strong { color: #fff; }
   <div class="card">
     <div class="card-title">Amazon Positioning &amp; Messaging</div>
     <p><strong>Title:</strong> "INNOVA LD100 Multi-System Leak Detector — HVAC Refrigerant + EVAP + Smoke Sniffer | R134a R1234yf | UV Light | 500-Hour Sensor"</p>
-    <p><strong>Lead bullet:</strong> "3-in-1 Leak Detection — The only handheld sniffer with dedicated HVAC, EVAP, and Smoke modes."</p>
+    <p><strong>Lead bullet:</strong> "3-in-1 Leak Detection — A handheld sniffer that combines dedicated HVAC, EVAP, and Smoke modes in one device."</p>
     <p><strong>A+ Content:</strong> Side-by-side vs. single-mode competitors. UV light demo photography. R1234yf compatibility messaging for the regulatory transition.</p>
     <p><strong>Timing:</strong> Launch by March to capture April–August A/C season surge (+150% seasonal ramp).</p>
   </div>
@@ -955,7 +959,7 @@ footer strong { color: #fff; }
       <li>Pricing is not yet confirmed by Innova — modeled at $149–$199 based on competitive benchmarks.</li>
       <li>Amazon sales data sourced from Helium 10 BlackBox export dated 2026-04-13; unit and revenue estimates are monthly approximations.</li>
       <li>No INNOVA LD100 is currently listed on Amazon — all sales data is competitor-only.</li>
-      <li>The LD100's three-mode approach (HVAC + EVAP + Smoke) is unique among the 33 ASINs analyzed — this is the central positioning hypothesis of this report.</li>
+      <li>Many competing models in the 33-ASIN set are also handheld, but none combine HVAC + EVAP + Smoke in one handheld unit. That three-mode combination is the central positioning hypothesis of this report.</li>
     </ul>
   </div>
 </section>
@@ -983,9 +987,8 @@ footer strong { color: #fff; }
   </div>
 </section>
 
-</div>
-
 <footer><strong>Innova Electronics</strong><span>LD100 Leak Detector Sniffer market research · April 2026 · Data: Amazon US (Helium 10), Google Trends, EPA, industry research · Confidential</span></footer>
+</div>
 
 <!-- Sidebar scroll highlight -->
 <script>
