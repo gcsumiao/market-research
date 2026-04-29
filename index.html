@@ -266,11 +266,11 @@
 
   <section class="priority-wrap">
     <h2>Product Priority Map</h2>
-    <p class="sub">Year-3 revenue potential vs. execution risk &middot; bubble size = composite score</p>
+    <p class="sub">Standardized Year-3 all-channel revenue potential vs. execution risk &middot; bubble size = composite score &middot; revenue labels synchronized to <code>/data/final_5yr_forecast.csv</code></p>
     <div class="priority-card">
       <svg width="100%" viewBox="0 0 920 960" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,'Segoe UI',sans-serif;">
         <text font-size="14" fill="#2c2c2a" font-weight="500" x="460" y="28" text-anchor="middle">Innova product priority map</text>
-        <text font-size="12" fill="#5f5e5a" x="460" y="46" text-anchor="middle">Year-3 revenue potential vs. execution risk · bubble size = composite score</text>
+        <text font-size="12" fill="#5f5e5a" x="460" y="46" text-anchor="middle">Standardized Year-3 all-channel revenue potential vs. execution risk · bubble size = composite score</text>
         <line x1="130" y1="120" x2="130" y2="560" stroke="#5f5e5a" stroke-width="0.5"/>
         <line x1="130" y1="560" x2="820" y2="560" stroke="#5f5e5a" stroke-width="0.5"/>
         <line x1="475" y1="120" x2="475" y2="560" stroke="#5f5e5a" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
@@ -278,8 +278,8 @@
         <text font-size="12" fill="#5f5e5a" x="130" y="585" text-anchor="start">Lower risk</text>
         <text font-size="12" fill="#5f5e5a" x="820" y="585" text-anchor="end">Higher risk</text>
         <text font-size="12" fill="#5f5e5a" x="475" y="610" text-anchor="middle">Execution risk →</text>
-        <text font-size="12" fill="#5f5e5a" x="118" y="560" text-anchor="end">$2M</text>
-        <text font-size="12" fill="#5f5e5a" x="118" y="340" text-anchor="end">$16M</text>
+        <text font-size="12" fill="#5f5e5a" x="118" y="560" text-anchor="end">$0.5M</text>
+        <text font-size="12" fill="#5f5e5a" x="118" y="340" text-anchor="end">$15M</text>
         <text font-size="12" fill="#5f5e5a" x="118" y="125" text-anchor="end">$30M</text>
         <text font-size="12" fill="#5f5e5a" x="86" y="345" text-anchor="middle" transform="rotate(-90 86 345)">Year-3 revenue ↑</text>
         <text font-size="12" fill="#5f5e5a" x="280" y="145" text-anchor="middle" opacity="0.55">Quick wins</text>
@@ -289,87 +289,95 @@
         <g>
           <circle cx="340" cy="215" r="46" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
           <text font-size="14" fill="#4A1B0C" font-weight="500" x="340" y="211" text-anchor="middle">Jump Starter</text>
-          <text font-size="12" fill="#712B13" x="340" y="227" text-anchor="middle">3.85 · $17M</text>
+          <text font-size="12" fill="#712B13" x="340" y="227" text-anchor="middle">3.85 · $17.30M</text>
         </g>
         <g>
           <circle cx="320" cy="310" r="43" fill="#EAF3EA" stroke="#3F7B39" stroke-width="1"/>
           <text font-size="13" fill="#1F4B1B" font-weight="500" x="320" y="304" text-anchor="middle">Borescope</text>
           <text font-size="13" fill="#1F4B1B" font-weight="500" x="320" y="319" text-anchor="middle">Screen</text>
-          <text font-size="11" fill="#2B6830" x="320" y="334" text-anchor="middle">3.65 · $10.6M</text>
+          <text font-size="11" fill="#2B6830" x="320" y="334" text-anchor="middle">3.65 · $10.58M</text>
         </g>
         <g>
           <circle cx="735" cy="165" r="48" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
           <text font-size="13" fill="#04342C" font-weight="500" x="735" y="158" text-anchor="middle">Emergency</text>
           <text font-size="13" fill="#04342C" font-weight="500" x="735" y="173" text-anchor="middle">Kit</text>
-          <text font-size="12" fill="#085041" x="735" y="189" text-anchor="middle">3.95 · $30M</text>
+          <text font-size="12" fill="#085041" x="735" y="189" text-anchor="middle">3.95 · $29.90M</text>
         </g>
         <g>
           <circle cx="190" cy="270" r="49" fill="#FDECEF" stroke="#A73C52" stroke-width="1"/>
           <text font-size="13" fill="#5E1F2D" font-weight="500" x="190" y="264" text-anchor="middle">DMM Core</text>
-          <text font-size="11" fill="#7D3041" x="190" y="280" text-anchor="middle">4.20 · ~$4.0M</text>
+          <text font-size="11" fill="#7D3041" x="190" y="280" text-anchor="middle">4.20 · $4.50M</text>
         </g>
         <g>
           <circle cx="285" cy="500" r="30" fill="#F9F2E3" stroke="#9A6A1B" stroke-width="1"/>
           <text font-size="11" fill="#5A3906" font-weight="500" x="285" y="494" text-anchor="middle">Oil Extractor</text>
           <text font-size="11" fill="#5A3906" font-weight="500" x="285" y="507" text-anchor="middle">Tool</text>
           <text font-size="10" fill="#7A4D0B" x="285" y="521" text-anchor="middle">2.70 · $3.58M</text>
+          <!-- Oil Extractor Y3 unchanged; revenue/units reconciled in product report -->
+
         </g>
         <g>
           <circle cx="430" cy="470" r="40" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
           <text font-size="14" fill="#26215C" font-weight="500" x="430" y="466" text-anchor="middle">Mech. Stool</text>
-          <text font-size="12" fill="#3C3489" x="430" y="482" text-anchor="middle">3.30 · $3.9M</text>
+          <text font-size="12" fill="#3C3489" x="430" y="482" text-anchor="middle">3.30 · $3.87M</text>
         </g>
         <g>
           <circle cx="220" cy="530" r="34" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
           <text font-size="14" fill="#412402" font-weight="500" x="220" y="526" text-anchor="middle">Bat. Monitor</text>
-          <text font-size="12" fill="#633806" x="220" y="542" text-anchor="middle">2.75 · $2M</text>
+          <text font-size="12" fill="#633806" x="220" y="542" text-anchor="middle">2.75 · $2.01M</text>
         </g>
         <g>
           <circle cx="365" cy="555" r="36" fill="#F7F1E6" stroke="#8A5A18" stroke-width="1"/>
           <text font-size="12" fill="#4A2B05" font-weight="500" x="365" y="549" text-anchor="middle">Tool</text>
           <text font-size="12" fill="#4A2B05" font-weight="500" x="365" y="563" text-anchor="middle">Backpack</text>
-          <text font-size="11" fill="#6A4310" x="365" y="577" text-anchor="middle">3.18 · ~$0.9M</text>
+          <text font-size="11" fill="#6A4310" x="365" y="577" text-anchor="middle">3.18 · $0.59M (base)</text>
         </g>
         <g>
           <circle cx="650" cy="535" r="38" fill="#E7F1FB" stroke="#2A6FA8" stroke-width="1"/>
           <text font-size="12" fill="#153B5C" font-weight="500" x="650" y="529" text-anchor="middle">Mag. Fender</text>
           <text font-size="12" fill="#153B5C" font-weight="500" x="650" y="543" text-anchor="middle">Tool Roll</text>
           <text font-size="11" fill="#23557E" x="650" y="557" text-anchor="middle">3.20 · $1.75M</text>
+          <!-- units reconciled (annual = 31,800; blended ASP = $55.03) -->
+
         </g>
         <g>
-          <circle cx="560" cy="455" r="24" fill="#F1EEF9" stroke="#6B58A5" stroke-width="1"/>
-          <text font-size="11" fill="#3F2D70" font-weight="500" x="560" y="450" text-anchor="middle">Borescope</text>
-          <text font-size="10" fill="#3F2D70" font-weight="500" x="560" y="463" text-anchor="middle">Wireless</text>
-          <text font-size="9.5" fill="#5A4590" x="560" y="475" text-anchor="middle">1.75 · $0.94M</text>
+          <circle cx="560" cy="455" r="24" fill="#F1EEF9" stroke="#6B58A5" stroke-width="1" stroke-dasharray="3 2"/>
+          <text font-size="11" fill="#3F2D70" font-weight="500" x="560" y="447" text-anchor="middle">Borescope</text>
+          <text font-size="10" fill="#3F2D70" font-weight="500" x="560" y="459" text-anchor="middle">Wireless</text>
+          <text font-size="9" fill="#5A4590" x="560" y="471" text-anchor="middle">validation only</text>
+          <text font-size="9.5" fill="#5A4590" x="560" y="483" text-anchor="middle">1.75 · $0.94M</text>
         </g>
         <g>
           <circle cx="185" cy="425" r="35" fill="#E7F6F4" stroke="#167A6D" stroke-width="1"/>
           <text font-size="12" fill="#0B4E46" font-weight="500" x="185" y="419" text-anchor="middle">Leak Detector</text>
           <text font-size="12" fill="#0B4E46" font-weight="500" x="185" y="433" text-anchor="middle">Sniffer</text>
-          <text font-size="11" fill="#13645A" x="185" y="448" text-anchor="middle">2.95 · $1.84M</text>
+          <text font-size="11" fill="#13645A" x="185" y="448" text-anchor="middle">2.95 · $2.10M</text>
         </g>
         <g>
           <circle cx="150" cy="495" r="31" fill="#E8F2FF" stroke="#2F6EA4" stroke-width="1"/>
           <text font-size="11" fill="#173A59" font-weight="500" x="150" y="489" text-anchor="middle">Digital</text>
           <text font-size="11" fill="#173A59" font-weight="500" x="150" y="502" text-anchor="middle">Gauge</text>
-          <text font-size="10" fill="#2A5D88" x="150" y="516" text-anchor="middle">2.80 · $2.8M</text>
+          <text font-size="10" fill="#2A5D88" x="150" y="516" text-anchor="middle">2.80 · $2.80M</text>
         </g>
         <g>
           <circle cx="260" cy="390" r="38" fill="#E9F7F2" stroke="#1E7A63" stroke-width="1"/>
           <text font-size="12" fill="#0E4B3D" font-weight="500" x="260" y="384" text-anchor="middle">Thermal / NV</text>
           <text font-size="12" fill="#0E4B3D" font-weight="500" x="260" y="398" text-anchor="middle">Monocular</text>
           <text font-size="10.5" fill="#19614F" x="260" y="413" text-anchor="middle">3.20 · $5.24M</text>
+          <!-- base case anchored on report ecommerce-base; channel bridge in product report; upside scenario shown there -->
+
         </g>
         <g>
           <circle cx="330" cy="435" r="41" fill="#FFF4DB" stroke="#9C6512" stroke-width="1"/>
           <text font-size="12" fill="#5A3704" font-weight="500" x="330" y="429" text-anchor="middle">LED Light</text>
           <text font-size="12" fill="#5A3704" font-weight="500" x="330" y="443" text-anchor="middle">Bar</text>
-          <text font-size="11" fill="#7A4B09" x="330" y="458" text-anchor="middle">3.55 · $3.8M</text>
+          <text font-size="11" fill="#7A4B09" x="330" y="458" text-anchor="middle">3.55 · $3.90M</text>
         </g>
         <g>
-          <circle cx="725" cy="470" r="36" fill="#FFF1D9" stroke="#A56708" stroke-width="1"/>
-          <text font-size="12" fill="#5F3A02" font-weight="500" x="725" y="464" text-anchor="middle">Audio DMM</text>
-          <text font-size="11" fill="#7B4A05" x="725" y="479" text-anchor="middle">3.00 · $1-3M</text>
+          <circle cx="725" cy="510" r="22" fill="#FFF1D9" stroke="#A56708" stroke-width="1" stroke-dasharray="3 2"/>
+          <text font-size="11" fill="#5F3A02" font-weight="500" x="725" y="503" text-anchor="middle">Audio DMM</text>
+          <text font-size="9" fill="#7B4A05" x="725" y="516" text-anchor="middle">validation only</text>
+          <text font-size="9.5" fill="#7B4A05" x="725" y="528" text-anchor="middle">3.00 · $0.50M (gated)</text>
         </g>
         <g transform="translate(100 645)">
           <rect x="0" y="0" width="365" height="150" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
@@ -385,14 +393,14 @@
         </g>
         <g transform="translate(485 645)">
           <rect x="0" y="0" width="365" height="150" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
-          <text font-size="11.5" fill="#4d4c47" x="12" y="20">Launch order</text>
-          <text font-size="10.5" fill="#5f5e5a" x="12" y="36">Quick wins first. Big bets stay.</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="70">1. DMM Core</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="84">2. Jump Starter</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="98">3. Borescope Screen</text>
-          <text font-size="10.5" fill="#5f5e5a" x="12" y="112">4. Thermal / NV Monocular</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="126">5. LED Light Bar</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="140">6. Leak Detector Sniffer</text>
+          <text font-size="11.5" fill="#4d4c47" x="12" y="20">Launch order (post-standardization)</text>
+          <text font-size="10.5" fill="#5f5e5a" x="12" y="36">Quick wins first. Big bets stay. Dashed circle = validation-only.</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="70">1. DMM Core ($4.50M Y3)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="84">2. Jump Starter ($17.30M Y3)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="98">3. Borescope Screen ($10.58M Y3)</text>
+          <text font-size="10.5" fill="#5f5e5a" x="12" y="112">4. Thermal / NV Monocular ($5.24M Y3 base)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="126">5. LED Light Bar ($3.90M Y3)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="140">6. Leak Detector Sniffer ($2.10M Y3)</text>
         </g>
       </svg>
     </div>
