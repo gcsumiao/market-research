@@ -1,0 +1,50 @@
+[PASS] section present in products/Borescope-CameraB/index.html
+[PASS] section present in products/DMM/index.html
+[PASS] section present in products/Digital-Gauge/index.html
+[PASS] section present in products/LED Light Bar/index.html
+[PASS] section present in products/Leak Detector Sniffer/index.html
+[PASS] section present in products/Magnetic-Fender-Tool-Roll/index.html
+[PASS] section present in products/Oil Extractor Tool/index.html
+[PASS] section present in products/battery-monitor/index.html
+[PASS] section present in products/emergency-kit/index.html
+[PASS] section present in products/jump-starters/index.html
+[PASS] section present in products/mechanic-stool/index.html
+[PASS] section present in products/misfire-diagnostic-kit/index.html
+[PASS] section present in products/thermal-monocular/index.html
+[PASS] section present in products/tool-backpack/index.html
+[PASS] CSV has Y1-Y5 for 'Emergency Kit (combined SKUs)'
+[PASS] CSV has Y1-Y5 for 'Jump Starter (Compact + Full-Size)'
+[PASS] CSV has Y1-Y5 for 'Mechanic Stool (Standard + Premium)'
+[PASS] CSV has Y1-Y5 for 'Battery Monitor (Classic + Character)'
+[PASS] CSV has Y1-Y5 for 'Tool Backpack (base case)'
+[PASS] CSV has Y1-Y5 for 'Tool Backpack (high-case scenario)'
+[PASS] CSV has Y1-Y5 for 'Magnetic Silicone Fender Tool Roll (Standard + Pro/XL)'
+[PASS] CSV has Y1-Y5 for 'DMM Core (3320 + 3340 + AutoZone 3-SKU)'
+[PASS] CSV has Y1-Y5 for 'Audio DMM (validation-only)'
+[PASS] CSV has Y1-Y5 for 'Leak Detector Sniffer (single dual-mode SKU)'
+[PASS] CSV has Y1-Y5 for 'MODU-LIGHT PRO + accessories'
+[PASS] CSV has Y1-Y5 for 'Oil Extractor (Auto + Manual)'
+[PASS] CSV has Y1-Y5 for 'Borescope Screen-Based'
+[PASS] CSV has Y1-Y5 for 'Borescope Wireless/App'
+[PASS] CSV has Y1-Y5 for 'Digital Gauge (single SKU)'
+[PASS] CSV has Y1-Y5 for 'Thermal / NV Monocular (Std + Premium SKUs)'
+[PASS] CSV has Y1-Y5 for 'Misfire Diagnostic Kit (single concept SKU)'
+[PASS] revenue = units x price OK for all 85 rows
+[PASS] revenue = sum(channel) OK for all 85 rows
+[PASS] homepage label 'Emergency Kit' = $29.90M matches CSV
+[PASS] homepage label 'Jump Starter' = $17.30M matches CSV
+[PASS] homepage label 'Mech. Stool' = $3.87M matches CSV
+[PASS] homepage label 'Bat. Monitor' = $2.01M matches CSV
+[PASS] homepage label 'Tool Backpack' = $1.03M matches CSV
+[PASS] homepage label 'Mag. Fender Tool Roll' = $1.75M matches CSV
+[PASS] homepage label 'DMM Core' = $4.50M matches CSV
+[PASS] homepage label 'Audio DMM' = $0.50M matches CSV
+[PASS] homepage label 'Leak Detector Sniffer' = $2.10M matches CSV
+[PASS] homepage label 'LED Light Bar' = $3.90M matches CSV
+[PASS] homepage label 'Oil Extractor Tool' = $3.58M matches CSV
+[PASS] homepage label 'Borescope Screen' = $10.58M matches CSV
+[PASS] homepage label 'Borescope Wireless' = $0.94M matches CSV
+[PASS] homepage label 'Digital Gauge' = $2.80M matches CSV
+[PASS] homepage label 'Thermal / NV Monocular' = $5.24M matches CSV
+
+[PASS] All checks passed (85 rows). Warnings: 0.

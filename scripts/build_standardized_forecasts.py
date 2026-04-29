@@ -52,8 +52,8 @@ Methodology shifts vs. April-2026 standardized pass:
     Y3 = $4.50M, report-derived) and "Audio DMM" (validation-only,
     capped Y3 = $0.5M, gated).
 
-  * Tool Backpack: anchored on report base case ($594K) instead of the
-    homepage midpoint ($900K). High-case scenario shown explicitly.
+  * Tool Backpack: target price standardized to $260. Unit assumptions remain
+    unchanged; base and high-case revenue are recalculated from units x price.
 
   * Borescope Wireless: classified D / NO-GO. Y4/Y5 flat-to-modest only.
 
@@ -259,27 +259,27 @@ PRODUCTS = [
         "included_on_homepage": True,
         "archetype": "D_validation_only",
         "forecast_status_y3": "reconciled",
-        "report_y3_m": 0.594,
+        "report_y3_m": 1.0296,
         "homepage_legacy_y3_m": 0.90,   # legacy midpoint
         "old_standardized_y3_m": 0.742,
-        "final_base_y3_m": 0.594,       # anchor base, not midpoint
+        "final_base_y3_m": 1.0296,
         "channel_conversion_factor": 1.00,
-        "online_share_assumption": "N/A - reverted; Innova scanner cross-sell is not 'online' in the channel-bridge sense",
-        "prior_forecast_scope": "Cross-sell to existing Innova scanner customers is the primary channel; modest retail upside if cost ladder ($253 retailer / $190 e-com) holds. April-2026 80% online uplift conflated cross-sell with web traffic.",
-        "y_revenue_m": [0.216, 0.396, 0.594, 0.653, 0.713],  # 1.10x / 1.20x of Y3
+        "online_share_assumption": "N/A - scanner customer cross-sell and Amazon are modeled directly in revenue",
+        "prior_forecast_scope": "Internal audit field only. Public report uses the current $260 target price and current unit ramp.",
+        "y_revenue_m": [0.3744, 0.6864, 1.0296, 1.1310, 1.2350],  # units x $260 target price
         "y_units": [1_440, 2_640, 3_960, 4_350, 4_750],
-        "y_blended_asp": [150.00, 150.00, 150.00, 150.00, 150.00],
-        "price_basis": "blended_retail_sell_through_e_com_tier",
+        "y_blended_asp": [260.00, 260.00, 260.00, 260.00, 260.00],
+        "price_basis": "blended_target_sell_through_price",
         "unit_basis": "annual_units",
         "y4_mult": 1.10,
         "y5_mult": 1.20,
         "y4_y5_rule": "Validation-only / niche: Y4 = 1.10 x Y3 ; Y5 = 1.20 x Y3. Run-rate must clear the 60-units/mo viability floor before any wider channel bet.",
         "channel_bridge_y3": [
-            ("Amazon Marketplace",          0.32, "amazon_marketplace_revenue_m"),
-            ("Direct e-commerce / DTC (Innova scanner cross-sell)", 0.27, "direct_ecommerce_revenue_m"),
+            ("Amazon Marketplace",          0.5584, "amazon_marketplace_revenue_m"),
+            ("Direct e-commerce / DTC (Innova scanner cross-sell)", 0.4712, "direct_ecommerce_revenue_m"),
         ],
-        "gate_or_caveat": "Anchored on report BASE case ($594K). Homepage legacy midpoint of $900K is not used; high-case Y3 ($1.08M) shown as a separate scenario row in the CSV.",
-        "notes": "Y1 target 1,200-2,400 units; re-evaluate at month 6. If run-rate < 60 u/mo, exit SKU.",
+        "gate_or_caveat": "Base case uses the $260 target price with a 3,960-unit Year-3 ramp. High-case Y3 is shown as a separate scenario row in the CSV.",
+        "notes": "Y1 base target is 1,440 units; re-evaluate at month 6. If run-rate < 60 u/mo, exit SKU.",
     },
 
     # ------------------------------------------------------------------- Tool Backpack (HIGH SCENARIO)
@@ -292,26 +292,26 @@ PRODUCTS = [
         "included_on_homepage": False,    # base is the bubble; high-case shown only in CSV/report
         "archetype": "D_validation_only",
         "forecast_status_y3": "reconciled",
-        "report_y3_m": 1.08,
+        "report_y3_m": 1.872,
         "homepage_legacy_y3_m": 0.90,
         "old_standardized_y3_m": 1.35,
-        "final_base_y3_m": 1.08,
+        "final_base_y3_m": 1.872,
         "channel_conversion_factor": 1.00,
         "online_share_assumption": "N/A - high-case scenario; Innova cross-sell + Amazon already reflected in revenue",
-        "prior_forecast_scope": "Report high-case scenario: 200 u/mo steady-state at the same e-com pricing.",
-        "y_revenue_m": [0.360, 0.720, 1.080, 1.188, 1.296],
+        "prior_forecast_scope": "Internal audit field only. High-case scenario uses the current $260 target price.",
+        "y_revenue_m": [0.624, 1.248, 1.872, 2.0592, 2.2464],
         "y_units": [2_400, 4_800, 7_200, 7_920, 8_640],
-        "y_blended_asp": [150.00, 150.00, 150.00, 150.00, 150.00],
-        "price_basis": "blended_retail_sell_through_e_com_tier",
+        "y_blended_asp": [260.00, 260.00, 260.00, 260.00, 260.00],
+        "price_basis": "blended_target_sell_through_price",
         "unit_basis": "annual_units",
         "y4_mult": 1.10,
         "y5_mult": 1.20,
         "y4_y5_rule": "Validation-only (high case): Y4 = 1.10 x Y3 ; Y5 = 1.20 x Y3.",
         "channel_bridge_y3": [
-            ("Amazon Marketplace",          0.55, "amazon_marketplace_revenue_m"),
-            ("Direct e-commerce / DTC (Innova scanner cross-sell)", 0.53, "direct_ecommerce_revenue_m"),
+            ("Amazon Marketplace",          0.9533, "amazon_marketplace_revenue_m"),
+            ("Direct e-commerce / DTC (Innova scanner cross-sell)", 0.9187, "direct_ecommerce_revenue_m"),
         ],
-        "gate_or_caveat": "High-case scenario; do NOT use as base. Requires sustained 200 u/mo on Innova cross-sell.",
+        "gate_or_caveat": "High-case scenario; do NOT use as base. Requires sustained 200 u/mo on Innova cross-sell at the $260 target price.",
         "notes": "Documented for completeness; not shown on homepage map.",
     },
 

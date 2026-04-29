@@ -12,3 +12,8 @@
 *.XLSM
 *.XLSB
 *.xlsx#
+
+# --- Forecast source-of-truth (DO commit these) ---
+!data/final_5yr_forecast.csv
+!data/forecast_audit.csv
+!data/validation_output.txt
