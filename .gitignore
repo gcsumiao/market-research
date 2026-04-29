@@ -1,1 +1,14 @@
 .DS_Store
+*.png
+*.PNG
+*.csv
+*.CSV
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.XLS
+*.XLSX
+*.XLSM
+*.XLSB
+*.xlsx#
