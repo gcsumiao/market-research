@@ -133,10 +133,59 @@
       border: 1px solid rgba(234,240,255,.12);
       box-shadow: 0 10px 24px rgba(0,0,0,.35);
     }
+    .priority-controls{
+      display:grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      margin: 0 0 14px;
+      color:#2c2c2a;
+      font-size: 12px;
+    }
+    .priority-control{
+      display:grid;
+      gap: 6px;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 8px;
+      background:#f7f6f2;
+    }
+    .priority-control-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      font-weight: 600;
+    }
+    .priority-control output{
+      color:#5f5e5a;
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+    }
+    .priority-control input[type="range"]{
+      width:100%;
+      accent-color:#147A56;
+    }
     .priority-card svg{
       display:block;
       width:100%;
       height:auto;
+    }
+    .priority-card svg a{
+      text-decoration:none;
+      outline:none;
+    }
+    .priority-card svg a .priority-bubble{
+      cursor:pointer;
+    }
+    .priority-card svg a:hover circle,
+    .priority-card svg a:focus-visible circle{
+      filter: drop-shadow(0 4px 7px rgba(20, 122, 86, .28));
+      stroke-width:2;
+    }
+    @media (max-width: 720px){
+      .priority-controls{
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -280,148 +329,212 @@
 
   <section class="priority-wrap">
     <h2>Product Priority Map</h2>
-    <p class="sub">Standardized Year-3 all-channel revenue potential vs. execution risk &middot; bubble size = composite score &middot; revenue labels sourced from product reports and <code>/data/final_5yr_forecast.csv</code></p>
+    <p class="sub">Standardized Year-3 all-channel revenue potential vs. execution risk &middot; bubble size = composite score &middot; revenue labels sourced from product reports and standardized forecast inputs</p>
     <div class="priority-card">
-      <svg width="100%" viewBox="0 0 920 960" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,'Segoe UI',sans-serif;">
-        <text font-size="14" fill="#2c2c2a" font-weight="500" x="460" y="28" text-anchor="middle">Innova product priority map</text>
-        <text font-size="12" fill="#5f5e5a" x="460" y="46" text-anchor="middle">Standardized Year-3 all-channel revenue potential vs. execution risk · bubble size = composite score</text>
-        <line x1="130" y1="120" x2="130" y2="560" stroke="#5f5e5a" stroke-width="0.5"/>
-        <line x1="130" y1="560" x2="820" y2="560" stroke="#5f5e5a" stroke-width="0.5"/>
-        <line x1="475" y1="120" x2="475" y2="560" stroke="#5f5e5a" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
-        <line x1="130" y1="340" x2="820" y2="340" stroke="#5f5e5a" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
-        <text font-size="12" fill="#5f5e5a" x="130" y="585" text-anchor="start">Highest risk</text>
-        <text font-size="12" fill="#5f5e5a" x="820" y="585" text-anchor="end">Lowest risk</text>
-        <text font-size="12" fill="#5f5e5a" x="475" y="610" text-anchor="middle">Execution risk: highest → lowest</text>
-        <text font-size="12" fill="#5f5e5a" x="118" y="560" text-anchor="end">&lt;$1M / low</text>
-        <text font-size="12" fill="#5f5e5a" x="118" y="340" text-anchor="end">$3-10M / mid</text>
-        <text font-size="12" fill="#5f5e5a" x="118" y="125" text-anchor="end">$25M+ / highest</text>
-        <text font-size="12" fill="#5f5e5a" x="86" y="345" text-anchor="middle" transform="rotate(-90 86 345)">Year-3 revenue potential ↑</text>
-        <text font-size="12" fill="#5f5e5a" x="280" y="145" text-anchor="middle" opacity="0.55">Big bets</text>
-        <text font-size="12" fill="#5f5e5a" x="660" y="145" text-anchor="middle" opacity="0.55">Quick wins</text>
-        <text font-size="12" fill="#5f5e5a" x="280" y="540" text-anchor="middle" opacity="0.55">Long shots</text>
-        <text font-size="12" fill="#5f5e5a" x="660" y="540" text-anchor="middle" opacity="0.55">Defensive plays</text>
-        <g>
-          <circle cx="660" cy="240" r="46" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
-          <text font-size="14" fill="#4A1B0C" font-weight="500" x="660" y="236" text-anchor="middle">Jump Starter</text>
-          <text font-size="12" fill="#712B13" x="660" y="252" text-anchor="middle">3.85 · $17.30M</text>
-        </g>
-        <g>
-          <circle cx="725" cy="320" r="43" fill="#EAF3EA" stroke="#3F7B39" stroke-width="1"/>
-          <text font-size="13" fill="#1F4B1B" font-weight="500" x="725" y="314" text-anchor="middle">Borescope</text>
-          <text font-size="13" fill="#1F4B1B" font-weight="500" x="725" y="329" text-anchor="middle">Screen</text>
-          <text font-size="11" fill="#2B6830" x="725" y="344" text-anchor="middle">3.65 · $10.58M</text>
-        </g>
-        <g>
-          <circle cx="210" cy="165" r="48" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
-          <text font-size="13" fill="#04342C" font-weight="500" x="210" y="158" text-anchor="middle">Emergency</text>
-          <text font-size="13" fill="#04342C" font-weight="500" x="210" y="173" text-anchor="middle">Kit</text>
-          <text font-size="12" fill="#085041" x="210" y="189" text-anchor="middle">3.95 · $29.90M</text>
-        </g>
-        <g>
-          <circle cx="805" cy="395" r="49" fill="#FDECEF" stroke="#A73C52" stroke-width="1"/>
-          <text font-size="13" fill="#5E1F2D" font-weight="500" x="805" y="389" text-anchor="middle">DMM Core</text>
-          <text font-size="11" fill="#7D3041" x="805" y="405" text-anchor="middle">4.20 · $4.50M</text>
-        </g>
-        <g>
-          <circle cx="615" cy="500" r="30" fill="#F9F2E3" stroke="#9A6A1B" stroke-width="1"/>
-          <text font-size="11" fill="#5A3906" font-weight="500" x="615" y="494" text-anchor="middle">Oil Extractor</text>
-          <text font-size="11" fill="#5A3906" font-weight="500" x="615" y="507" text-anchor="middle">Tool</text>
-          <text font-size="10" fill="#7A4D0B" x="615" y="521" text-anchor="middle">2.70 · $3.58M</text>
-          <!-- Oil Extractor Y3 unchanged; revenue/units reconciled in product report -->
+      <div class="priority-controls" aria-label="Priority map spread control">
+        <label class="priority-control" for="mapSpread">
+          <span class="priority-control-row">
+            <span>Map spread</span>
+            <output id="mapSpreadValue" for="mapSpread">100%</output>
+          </span>
+          <input id="mapSpread" type="range" min="100" max="140" step="1" value="100" aria-label="Map spread percentage">
+        </label>
+      </div>
+      <svg width="100%" viewBox="0 0 1120 1080" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,'Segoe UI',sans-serif;">
+        <text font-size="14" fill="#2c2c2a" font-weight="500" x="560" y="28" text-anchor="middle">Innova product priority map</text>
+        <text font-size="12" fill="#5f5e5a" x="560" y="46" text-anchor="middle">Standardized Year-3 all-channel revenue potential vs. execution risk · bubble size = composite score</text>
+        <line x1="120" y1="120" x2="120" y2="740" stroke="#5f5e5a" stroke-width="0.5"/>
+        <line x1="120" y1="740" x2="1010" y2="740" stroke="#5f5e5a" stroke-width="0.5"/>
+        <line x1="560" y1="120" x2="560" y2="740" stroke="#5f5e5a" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
+        <line x1="120" y1="430" x2="1010" y2="430" stroke="#5f5e5a" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
+        <text font-size="12" fill="#5f5e5a" x="120" y="765" text-anchor="start">Highest risk</text>
+        <text font-size="12" fill="#5f5e5a" x="1010" y="765" text-anchor="end">Lowest risk</text>
+        <text font-size="12" fill="#5f5e5a" x="560" y="790" text-anchor="middle">Execution risk: highest → lowest</text>
+        <text font-size="12" fill="#5f5e5a" x="108" y="740" text-anchor="end">&lt;$1M / low</text>
+        <text font-size="12" fill="#5f5e5a" x="108" y="430" text-anchor="end">$3-10M / mid</text>
+        <text font-size="12" fill="#5f5e5a" x="108" y="125" text-anchor="end">$25M+ / highest</text>
+        <text font-size="12" fill="#5f5e5a" x="76" y="430" text-anchor="middle" transform="rotate(-90 76 430)">Year-3 revenue potential ↑</text>
+        <text font-size="12" fill="#5f5e5a" x="340" y="155" text-anchor="middle" opacity="0.55">Big bets</text>
+        <text font-size="12" fill="#5f5e5a" x="785" y="155" text-anchor="middle" opacity="0.55">Quick wins</text>
+        <text font-size="12" fill="#5f5e5a" x="340" y="720" text-anchor="middle" opacity="0.55">Long shots</text>
+        <text font-size="12" fill="#5f5e5a" x="785" y="720" text-anchor="middle" opacity="0.55">Defensive plays</text>
+        <a href="./products/jump-starters/" aria-label="Open Jump Starters report">
+          <g class="priority-bubble" data-base-x="610" data-base-y="235">
+            <circle cx="610" cy="235" r="38" fill="#FFF3C4" stroke="#B88700" stroke-width="1"/>
+            <text font-size="11.5" fill="#5C4200" font-weight="500" x="610" y="226" text-anchor="middle">Jump Starter</text>
+            <text font-size="11" fill="#7B5B00" font-weight="500" x="610" y="241" text-anchor="middle">T10</text>
+            <text font-size="10" fill="#7B5B00" x="610" y="256" text-anchor="middle">3.45 · $14.88M</text>
+          </g>
+        </a>
+        <a href="./products/jump-starters/" aria-label="Open Jump Starters report">
+          <g class="priority-bubble" data-base-x="885" data-base-y="250">
+            <circle cx="885" cy="250" r="42" fill="#DFF5E7" stroke="#157A3D" stroke-width="1"/>
+            <text font-size="12" fill="#0B3F23" font-weight="500" x="885" y="241" text-anchor="middle">Jump Starter</text>
+            <text font-size="11.5" fill="#157A3D" font-weight="500" x="885" y="257" text-anchor="middle">T17</text>
+            <text font-size="10.5" fill="#157A3D" x="885" y="273" text-anchor="middle">3.85 · $14.88M</text>
+          </g>
+        </a>
+        <a href="./products/jump-starters/" aria-label="Open Jump Starters report">
+          <g class="priority-bubble" data-base-x="725" data-base-y="225">
+            <circle cx="725" cy="225" r="41" fill="#F7EBC6" stroke="#9B6B13" stroke-width="1"/>
+            <text font-size="11.5" fill="#543A06" font-weight="500" x="725" y="214" text-anchor="middle">Jump Starter</text>
+            <text font-size="10.5" fill="#704E0B" font-weight="500" x="725" y="229" text-anchor="middle">BLCKTEC Q8</text>
+            <text font-size="10" fill="#704E0B" x="725" y="244" text-anchor="middle">3.75 · $15.85M*</text>
+          </g>
+        </a>
+        <a href="./products/Borescope-CameraB/" aria-label="Open Articulating Borescope report">
+          <g class="priority-bubble" data-base-x="910" data-base-y="380">
+            <circle cx="910" cy="380" r="43" fill="#DDF6EE" stroke="#118B6A" stroke-width="1"/>
+            <text font-size="13" fill="#064638" font-weight="500" x="910" y="374" text-anchor="middle">Borescope</text>
+            <text font-size="13" fill="#064638" font-weight="500" x="910" y="389" text-anchor="middle">Screen</text>
+            <text font-size="11" fill="#0B6B52" x="910" y="404" text-anchor="middle">3.65 · $10.58M</text>
+          </g>
+        </a>
+        <a href="./products/emergency-kit/" aria-label="Open Emergency Kit report">
+          <g class="priority-bubble" data-base-x="220" data-base-y="190">
+            <circle cx="220" cy="190" r="48" fill="#FDE7DC" stroke="#B65A34" stroke-width="1"/>
+            <text font-size="13" fill="#4A1B0C" font-weight="500" x="220" y="183" text-anchor="middle">Emergency</text>
+            <text font-size="13" fill="#4A1B0C" font-weight="500" x="220" y="198" text-anchor="middle">Kit</text>
+            <text font-size="12" fill="#712B13" x="220" y="214" text-anchor="middle">3.95 · $29.90M</text>
+          </g>
+        </a>
+        <a href="./products/DMM/" aria-label="Open Digital Multimeter report">
+          <g class="priority-bubble" data-base-x="995" data-base-y="485">
+            <circle cx="995" cy="485" r="49" fill="#E3F7D7" stroke="#4F8A10" stroke-width="1"/>
+            <text font-size="13" fill="#264707" font-weight="500" x="995" y="479" text-anchor="middle">DMM Core</text>
+            <text font-size="11" fill="#3E7010" x="995" y="495" text-anchor="middle">4.20 · $4.50M</text>
+          </g>
+        </a>
+        <a href="./products/Oil%20Extractor%20Tool/" aria-label="Open Oil Extractor Tool report">
+          <g class="priority-bubble" data-base-x="760" data-base-y="590">
+            <circle cx="760" cy="590" r="30" fill="#FFF1D6" stroke="#B46A00" stroke-width="1"/>
+            <text font-size="11" fill="#5C3500" font-weight="500" x="760" y="584" text-anchor="middle">Oil Extractor</text>
+            <text font-size="11" fill="#5C3500" font-weight="500" x="760" y="597" text-anchor="middle">Tool</text>
+            <text font-size="10" fill="#854E00" x="760" y="611" text-anchor="middle">2.70 · $3.58M</text>
+            <!-- Oil Extractor Y3 unchanged; revenue/units reconciled in product report -->
 
-        </g>
-        <g>
-          <circle cx="685" cy="455" r="40" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
-          <text font-size="14" fill="#26215C" font-weight="500" x="685" y="451" text-anchor="middle">Mech. Stool</text>
-          <text font-size="12" fill="#3C3489" x="685" y="467" text-anchor="middle">3.30 · $3.87M</text>
-        </g>
-        <g>
-          <circle cx="815" cy="545" r="34" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
-          <text font-size="14" fill="#412402" font-weight="500" x="815" y="541" text-anchor="middle">Bat. Monitor</text>
-          <text font-size="12" fill="#633806" x="815" y="557" text-anchor="middle">2.75 · $2.01M</text>
-        </g>
-        <g>
-          <circle cx="670" cy="550" r="36" fill="#F7F1E6" stroke="#8A5A18" stroke-width="1"/>
-          <text font-size="12" fill="#4A2B05" font-weight="500" x="670" y="544" text-anchor="middle">Tool</text>
-          <text font-size="12" fill="#4A2B05" font-weight="500" x="670" y="558" text-anchor="middle">Backpack</text>
-          <text font-size="11" fill="#6A4310" x="670" y="572" text-anchor="middle">3.18 · $1.03M (base)</text>
-        </g>
-        <g>
-          <circle cx="445" cy="535" r="38" fill="#E7F1FB" stroke="#2A6FA8" stroke-width="1"/>
-          <text font-size="12" fill="#153B5C" font-weight="500" x="445" y="529" text-anchor="middle">Mag. Fender</text>
-          <text font-size="12" fill="#153B5C" font-weight="500" x="445" y="543" text-anchor="middle">Tool Roll</text>
-          <text font-size="11" fill="#23557E" x="445" y="557" text-anchor="middle">3.20 · $1.75M</text>
-          <!-- units reconciled (annual = 31,800; blended ASP = $55.03) -->
+          </g>
+        </a>
+        <a href="./products/mechanic-stool/" aria-label="Open Mechanic Stool report">
+          <g class="priority-bubble" data-base-x="860" data-base-y="585">
+            <circle cx="860" cy="585" r="40" fill="#F4E8FF" stroke="#7A4BB3" stroke-width="1"/>
+            <text font-size="14" fill="#3D2361" font-weight="500" x="860" y="581" text-anchor="middle">Mech. Stool</text>
+            <text font-size="12" fill="#5D368A" x="860" y="597" text-anchor="middle">3.30 · $3.87M</text>
+          </g>
+        </a>
+        <a href="./products/battery-monitor/" aria-label="Open Battery Monitor report">
+          <g class="priority-bubble" data-base-x="980" data-base-y="720">
+            <circle cx="980" cy="720" r="34" fill="#EAF8D9" stroke="#6A9E16" stroke-width="1"/>
+            <text font-size="14" fill="#334D09" font-weight="500" x="980" y="716" text-anchor="middle">Bat. Monitor</text>
+            <text font-size="12" fill="#557F12" x="980" y="732" text-anchor="middle">2.75 · $2.01M</text>
+          </g>
+        </a>
+        <a href="./products/tool-backpack/" aria-label="Open Tool Backpack report">
+          <g class="priority-bubble" data-base-x="880" data-base-y="720">
+            <circle cx="880" cy="720" r="36" fill="#F7EDD8" stroke="#9A6A1B" stroke-width="1"/>
+            <text font-size="12" fill="#4A330C" font-weight="500" x="880" y="714" text-anchor="middle">Tool</text>
+            <text font-size="12" fill="#4A330C" font-weight="500" x="880" y="728" text-anchor="middle">Backpack</text>
+            <text font-size="11" fill="#724E15" x="880" y="742" text-anchor="middle">3.18 · $1.03M (base)</text>
+          </g>
+        </a>
+        <a href="./products/Magnetic-Fender-Tool-Roll/" aria-label="Open Magnetic Fender Tool Roll report">
+          <g class="priority-bubble" data-base-x="575" data-base-y="740">
+            <circle cx="575" cy="740" r="38" fill="#E7F2FF" stroke="#2A6FA8" stroke-width="1"/>
+            <text font-size="12" fill="#153B5C" font-weight="500" x="575" y="734" text-anchor="middle">Mag. Fender</text>
+            <text font-size="12" fill="#153B5C" font-weight="500" x="575" y="748" text-anchor="middle">Tool Roll</text>
+            <text font-size="11" fill="#23557E" x="575" y="762" text-anchor="middle">3.20 · $1.75M</text>
+            <!-- units reconciled (annual = 31,800; blended ASP = $55.03) -->
 
-        </g>
-        <g>
-          <circle cx="380" cy="555" r="24" fill="#F1EEF9" stroke="#6B58A5" stroke-width="1" stroke-dasharray="3 2"/>
-          <text font-size="11" fill="#3F2D70" font-weight="500" x="380" y="547" text-anchor="middle">Borescope</text>
-          <text font-size="10" fill="#3F2D70" font-weight="500" x="380" y="559" text-anchor="middle">Wireless</text>
-          <text font-size="9" fill="#5A4590" x="380" y="571" text-anchor="middle">validation only</text>
-          <text font-size="9.5" fill="#5A4590" x="380" y="583" text-anchor="middle">1.75 · $0.94M</text>
-        </g>
-        <g>
-          <circle cx="750" cy="505" r="35" fill="#E7F6F4" stroke="#167A6D" stroke-width="1"/>
-          <text font-size="12" fill="#0B4E46" font-weight="500" x="750" y="499" text-anchor="middle">Leak Detector</text>
-          <text font-size="12" fill="#0B4E46" font-weight="500" x="750" y="513" text-anchor="middle">Sniffer</text>
-          <text font-size="11" fill="#13645A" x="750" y="528" text-anchor="middle">2.95 · $2.10M</text>
-        </g>
-        <g>
-          <circle cx="515" cy="510" r="31" fill="#E8F2FF" stroke="#2F6EA4" stroke-width="1"/>
-          <text font-size="11" fill="#173A59" font-weight="500" x="515" y="504" text-anchor="middle">Digital</text>
-          <text font-size="11" fill="#173A59" font-weight="500" x="515" y="517" text-anchor="middle">Gauge</text>
-          <text font-size="10" fill="#2A5D88" x="515" y="531" text-anchor="middle">2.80 · $2.80M</text>
-        </g>
-        <g>
-          <circle cx="500" cy="270" r="48" fill="#DDF4EA" stroke="#147A56" stroke-width="1"/>
-          <text font-size="13" fill="#073C2C" font-weight="500" x="500" y="261" text-anchor="middle">USB-C</text>
-          <text font-size="11.5" fill="#0E5C42" font-weight="500" x="500" y="276" text-anchor="middle">Thermal Imager</text>
-          <text font-size="10.5" fill="#17694E" x="500" y="291" text-anchor="middle">4.15 · $9.01M</text>
-        </g>
-        <g>
-          <circle cx="360" cy="385" r="41" fill="#E2F3F8" stroke="#1F6F89" stroke-width="1"/>
-          <text font-size="13" fill="#0E3F51" font-weight="500" x="360" y="377" text-anchor="middle">Handheld</text>
-          <text font-size="11.5" fill="#155A70" font-weight="500" x="360" y="392" text-anchor="middle">Thermal Imager</text>
-          <text font-size="10.5" fill="#1D6D84" x="360" y="407" text-anchor="middle">3.50 · $4.50M</text>
-        </g>
-        <g>
-          <circle cx="455" cy="425" r="44" fill="#E9F7F2" stroke="#1E7A63" stroke-width="1"/>
-          <text font-size="10.5" fill="#0E4B3D" font-weight="500" x="455" y="406" text-anchor="middle">Thermal &amp; Night</text>
-          <text font-size="10.5" fill="#0E4B3D" font-weight="500" x="455" y="419" text-anchor="middle">Vision</text>
-          <text font-size="10.5" fill="#0E4B3D" font-weight="500" x="455" y="432" text-anchor="middle">Monocular</text>
-          <text font-size="9.5" fill="#19614F" x="455" y="446" text-anchor="middle">384 Pro</text>
-          <text font-size="10" fill="#19614F" x="455" y="460" text-anchor="middle">3.75 · $2.08M</text>
-          <!-- 384 Pro single-SKU base case from updated product report; risk level = Medium -->
+          </g>
+        </a>
+        <a href="./products/Borescope-CameraB/" aria-label="Open Articulating Borescope report">
+          <g class="priority-bubble" data-base-x="430" data-base-y="735">
+            <circle cx="430" cy="735" r="24" fill="#F1EEF9" stroke="#6B58A5" stroke-width="1" stroke-dasharray="3 2"/>
+            <text font-size="11" fill="#3F2D70" font-weight="500" x="430" y="727" text-anchor="middle">Borescope</text>
+            <text font-size="10" fill="#3F2D70" font-weight="500" x="430" y="739" text-anchor="middle">Wireless</text>
+            <text font-size="9" fill="#5A4590" x="430" y="751" text-anchor="middle">validation only</text>
+            <text font-size="9.5" fill="#5A4590" x="430" y="763" text-anchor="middle">1.75 · $0.94M</text>
+          </g>
+        </a>
+        <a href="./products/Leak%20Detector%20Sniffer/" aria-label="Open Leak Detector Sniffer report">
+          <g class="priority-bubble" data-base-x="1000" data-base-y="620">
+            <circle cx="1000" cy="620" r="35" fill="#DDF6F4" stroke="#0B8073" stroke-width="1"/>
+            <text font-size="12" fill="#06433E" font-weight="500" x="1000" y="614" text-anchor="middle">Leak Detector</text>
+            <text font-size="12" fill="#06433E" font-weight="500" x="1000" y="628" text-anchor="middle">Sniffer</text>
+            <text font-size="11" fill="#0A6259" x="1000" y="643" text-anchor="middle">2.95 · $2.10M</text>
+          </g>
+        </a>
+        <a href="./products/Digital-Gauge/" aria-label="Open Digital Gauge report">
+          <g class="priority-bubble" data-base-x="640" data-base-y="665">
+            <circle cx="640" cy="665" r="31" fill="#E8F6CF" stroke="#789B12" stroke-width="1"/>
+            <text font-size="11" fill="#3D4E07" font-weight="500" x="640" y="659" text-anchor="middle">Digital</text>
+            <text font-size="11" fill="#3D4E07" font-weight="500" x="640" y="672" text-anchor="middle">Gauge</text>
+            <text font-size="10" fill="#5E780E" x="640" y="686" text-anchor="middle">2.80 · $2.80M</text>
+          </g>
+        </a>
+        <a href="./products/thermal-imager/" aria-label="Open Thermal Imager report">
+          <g class="priority-bubble" data-base-x="650" data-base-y="360">
+            <circle cx="650" cy="360" r="48" fill="#DDF7E4" stroke="#0F8B4C" stroke-width="1"/>
+            <text font-size="13" fill="#064425" font-weight="500" x="650" y="351" text-anchor="middle">USB-C</text>
+            <text font-size="11.5" fill="#064425" font-weight="500" x="650" y="366" text-anchor="middle">Thermal Imager</text>
+            <text font-size="10.5" fill="#0B6C3B" x="650" y="381" text-anchor="middle">4.15 · $9.01M</text>
+          </g>
+        </a>
+        <a href="./products/thermal-imager/" aria-label="Open Thermal Imager report">
+          <g class="priority-bubble" data-base-x="535" data-base-y="470">
+            <circle cx="535" cy="470" r="41" fill="#E1F2F8" stroke="#247D98" stroke-width="1"/>
+            <text font-size="13" fill="#123F4D" font-weight="500" x="535" y="462" text-anchor="middle">Handheld</text>
+            <text font-size="11.5" fill="#123F4D" font-weight="500" x="535" y="477" text-anchor="middle">Thermal Imager</text>
+            <text font-size="10.5" fill="#1D6175" x="535" y="492" text-anchor="middle">3.50 · $4.50M</text>
+          </g>
+        </a>
+        <a href="./products/thermal-monocular/" aria-label="Open Thermal and Night Vision Monocular report">
+          <g class="priority-bubble" data-base-x="720" data-base-y="735">
+            <circle cx="720" cy="735" r="44" fill="#E8F0FF" stroke="#496FB8" stroke-width="1"/>
+            <text font-size="10.5" fill="#223A66" font-weight="500" x="720" y="716" text-anchor="middle">Thermal &amp; Night</text>
+            <text font-size="10.5" fill="#223A66" font-weight="500" x="720" y="729" text-anchor="middle">Vision</text>
+            <text font-size="10.5" fill="#223A66" font-weight="500" x="720" y="742" text-anchor="middle">Monocular</text>
+            <text font-size="9.5" fill="#36588F" x="720" y="756" text-anchor="middle">384 Pro</text>
+            <text font-size="10" fill="#36588F" x="720" y="770" text-anchor="middle">3.75 · $2.08M</text>
+            <!-- 384 Pro single-SKU base case from updated product report; risk level = Medium -->
 
-        </g>
-        <g>
-          <circle cx="560" cy="440" r="41" fill="#FFF4DB" stroke="#9C6512" stroke-width="1"/>
-          <text font-size="12" fill="#5A3704" font-weight="500" x="560" y="434" text-anchor="middle">LED Light</text>
-          <text font-size="12" fill="#5A3704" font-weight="500" x="560" y="448" text-anchor="middle">Bar</text>
-          <text font-size="11" fill="#7A4B09" x="560" y="463" text-anchor="middle">3.55 · $3.90M</text>
-        </g>
-        <g>
-          <circle cx="550" cy="350" r="40" fill="#F0F7EF" stroke="#2F7A3C" stroke-width="1"/>
-          <text font-size="12" fill="#17451F" font-weight="500" x="550" y="344" text-anchor="middle">Smoke</text>
-          <text font-size="12" fill="#17451F" font-weight="500" x="550" y="358" text-anchor="middle">Machine</text>
-          <text font-size="10.5" fill="#27602E" x="550" y="373" text-anchor="middle">3.30 · $3.60M</text>
-        </g>
-        <g>
-          <circle cx="190" cy="525" r="27" fill="#F6EAF0" stroke="#944862" stroke-width="1" stroke-dasharray="3 2"/>
-          <text font-size="10.5" fill="#5A2638" font-weight="500" x="190" y="515" text-anchor="middle">Mini Smoke</text>
-          <text font-size="10.5" fill="#5A2638" font-weight="500" x="190" y="528" text-anchor="middle">Machine</text>
-          <text font-size="9.5" fill="#7A3A50" x="190" y="541" text-anchor="middle">2.55 · $0.60M</text>
-          <text font-size="8.5" fill="#7A3A50" x="190" y="552" text-anchor="middle">no-go @ $149</text>
-        </g>
-        <g>
-          <circle cx="260" cy="555" r="22" fill="#FFF1D9" stroke="#A56708" stroke-width="1" stroke-dasharray="3 2"/>
-          <text font-size="11" fill="#5F3A02" font-weight="500" x="260" y="548" text-anchor="middle">Audio DMM</text>
-          <text font-size="9" fill="#7B4A05" x="260" y="561" text-anchor="middle">validation only</text>
-          <text font-size="9.5" fill="#7B4A05" x="260" y="573" text-anchor="middle">3.00 · $0.50M (gated)</text>
-        </g>
-        <g transform="translate(100 645)">
-          <rect x="0" y="0" width="365" height="150" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
+          </g>
+        </a>
+        <a href="./products/LED%20Light%20Bar/" aria-label="Open LED Light Bar report">
+          <g class="priority-bubble" data-base-x="790" data-base-y="420">
+            <circle cx="790" cy="420" r="41" fill="#ECF8D8" stroke="#83A51B" stroke-width="1"/>
+            <text font-size="12" fill="#40520A" font-weight="500" x="790" y="414" text-anchor="middle">LED Light</text>
+            <text font-size="12" fill="#40520A" font-weight="500" x="790" y="428" text-anchor="middle">Bar</text>
+            <text font-size="11" fill="#668014" x="790" y="443" text-anchor="middle">3.55 · $3.90M</text>
+          </g>
+        </a>
+        <a href="./products/Smoke-Machine/" aria-label="Open Smoke Machine report">
+          <g class="priority-bubble" data-base-x="650" data-base-y="495">
+            <circle cx="650" cy="495" r="40" fill="#E1F6DD" stroke="#3C933B" stroke-width="1"/>
+            <text font-size="12" fill="#1D4A1D" font-weight="500" x="650" y="489" text-anchor="middle">Smoke</text>
+            <text font-size="12" fill="#1D4A1D" font-weight="500" x="650" y="503" text-anchor="middle">Machine</text>
+            <text font-size="10.5" fill="#2F732F" x="650" y="518" text-anchor="middle">3.30 · $3.60M</text>
+          </g>
+        </a>
+        <a href="./products/Smoke-Machine/" aria-label="Open Smoke Machine report">
+          <g class="priority-bubble" data-base-x="180" data-base-y="720">
+            <circle cx="180" cy="720" r="27" fill="#F6EAF0" stroke="#944862" stroke-width="1" stroke-dasharray="3 2"/>
+            <text font-size="10.5" fill="#5A2638" font-weight="500" x="180" y="710" text-anchor="middle">Mini Smoke</text>
+            <text font-size="10.5" fill="#5A2638" font-weight="500" x="180" y="723" text-anchor="middle">Machine</text>
+            <text font-size="9.5" fill="#7A3A50" x="180" y="736" text-anchor="middle">2.55 · $0.60M</text>
+            <text font-size="8.5" fill="#7A3A50" x="180" y="747" text-anchor="middle">no-go @ $149</text>
+          </g>
+        </a>
+        <a href="./products/DMM/" aria-label="Open Digital Multimeter report">
+          <g class="priority-bubble" data-base-x="300" data-base-y="735">
+            <circle cx="300" cy="735" r="22" fill="#F7EAFE" stroke="#7C4D9E" stroke-width="1" stroke-dasharray="3 2"/>
+            <text font-size="11" fill="#45245E" font-weight="500" x="300" y="728" text-anchor="middle">Audio DMM</text>
+            <text font-size="9" fill="#62387D" x="300" y="741" text-anchor="middle">validation only</text>
+            <text font-size="9.5" fill="#62387D" x="300" y="753" text-anchor="middle">3.00 · $0.50M (gated)</text>
+          </g>
+        </a>
+        <g transform="translate(100 820)">
+          <rect x="0" y="0" width="430" height="150" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
           <text font-size="11.5" fill="#4d4c47" x="12" y="20">How to read</text>
           <text font-size="10.5" fill="#5f5e5a" x="12" y="38">1. Map tells: "How much can this make, and how hard</text>
           <text font-size="10.5" fill="#5f5e5a" x="12" y="52">will it be to execute?"</text>
@@ -432,21 +545,23 @@
           <text font-size="10.5" fill="#5f5e5a" x="12" y="126">"A large bubble in Big Bets deserves a dedicated</text>
           <text font-size="10.5" fill="#5f5e5a" x="12" y="140">workstream with risk mitigation built in."</text>
         </g>
-        <g transform="translate(485 645)">
-          <rect x="0" y="0" width="365" height="195" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
-          <text font-size="11.5" fill="#4d4c47" x="12" y="20">Launch order (post-standardization)</text>
+        <g transform="translate(590 820)">
+          <rect x="0" y="0" width="430" height="210" rx="6" fill="#f1efe8" stroke="rgba(0,0,0,0.15)" stroke-width="0.5"/>
+          <text font-size="11.5" fill="#4d4c47" x="12" y="20">Jump starter priority read</text>
           <text font-size="10.5" fill="#5f5e5a" x="12" y="36">Priority: Quick wins → Defensive plays → Big bets → Long shots.</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="58">1. Jump Starter</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="70">2. HF-25DC USB-C Thermal Imager</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="82">3. Borescope Screen</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="94">4. DMM Core</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="106">5. DP-32D Handheld Thermal Imager</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="118">6. LED Light Bar</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="130">7. Smoke Machine</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="142">8. Mechanic Stool</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="154">9. Thermal/NV Monocular (384 Pro)</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="166">10. Tool Backpack</text>
-          <text font-size="11" fill="#5f5e5a" x="12" y="178">11. Leak Detector Sniffer</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="58">1. Jump Starter &mdash; T17</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="70">2. Jump Starter &mdash; BLCKTEC Q8 (premium-defensible / execution-gated)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="82">3. Jump Starter &mdash; T10 (conditional)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="94">4. HF-25DC USB-C Thermal Imager</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="106">5. Borescope Screen</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="118">6. DMM Core</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="130">7. DP-32D Handheld Thermal Imager</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="142">8. LED Light Bar</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="154">9. Smoke Machine</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="166">10. Mechanic Stool</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="178">11. Thermal/NV Monocular (384 Pro)</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="190">12. Tool Backpack</text>
+          <text font-size="11" fill="#5f5e5a" x="12" y="202">13. Leak Detector Sniffer</text>
         </g>
       </svg>
     </div>
@@ -455,5 +570,50 @@
   <footer>
     https://gcsumiao.github.io/market-research/
   </footer>
+  <script>
+    (() => {
+      const plotCenter = { x: 565, y: 430 };
+      const spreadInput = document.getElementById('mapSpread');
+      const spreadValue = document.getElementById('mapSpreadValue');
+      const bubbles = Array.from(document.querySelectorAll('.priority-bubble'));
+      const priorityLinks = Array.from(document.querySelectorAll('.priority-wrap svg a[href]'));
+
+      spreadInput.value = '100';
+
+      function updatePriorityMapSpread() {
+        const spreadScale = (Number(spreadInput.value) / 100) * 0.8;
+
+        spreadValue.textContent = `${spreadInput.value}%`;
+
+        bubbles.forEach((bubble) => {
+          const baseX = Number(bubble.dataset.baseX);
+          const baseY = Number(bubble.dataset.baseY);
+          const nextX = plotCenter.x + (baseX - plotCenter.x) * spreadScale;
+          const nextY = plotCenter.y + (baseY - plotCenter.y) * spreadScale;
+          const dx = nextX - baseX;
+          const dy = nextY - baseY;
+
+          bubble.setAttribute('transform', `translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+        });
+      }
+
+      priorityLinks.forEach((link) => {
+        link.setAttribute('tabindex', '0');
+        link.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+
+          event.preventDefault();
+          const href = link.getAttribute('href');
+
+          if (href) {
+            window.location.href = href;
+          }
+        });
+      });
+
+      spreadInput.addEventListener('input', updatePriorityMapSpread);
+      updatePriorityMapSpread();
+    })();
+  </script>
 </body>
 </html>
